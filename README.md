@@ -2,7 +2,8 @@
 This project provides an example of how to capture OpenLineage events from Airflow using watsonx.data intelligence.
 
 **Prerequisites**
-An instance of Airflow must either be available (running on any OS or environment) or can be installed using the instructions below that describe how to install an instance of Airflow (https://airflow.apache.org/) using Astonomer's (https://www.astronomer.io/) Astro CLI (https://www.astronomer.io/docs/cli/v1.44/overview) on macOS running on Podman (https://podman.io/). This example uses Airflow v3.3.0+astro.2 with Podman v6.1.0.
+**1. An instance of Airflow:**
+It mmust either be available (running on any OS or environment) or can be installed using the instructions below that describe how to install an instance of Airflow (https://airflow.apache.org/) using Astonomer's (https://www.astronomer.io/) Astro CLI (https://www.astronomer.io/docs/cli/v1.44/overview) on macOS running on Podman (https://podman.io/). This example uses Airflow v3.3.0+astro.2 with Podman v6.1.0.
 
 If you are installing Airflow on macOS, you'll need to install Homebrew first.
 
@@ -80,13 +81,14 @@ Point your browser to the Airflow UI URL printed in the previous step and you sh
 
 <img width="1508" height="933" alt="Screenshot 2026-10-08 at 4 46 43 PM" src="https://github.com/user-attachments/assets/f4784ecf-bd7b-4965-9095-5ee3064aec4b" />
 
-**A watsonx.data intelligence environment.** 
+** 2. A watsonx.data intelligence environment.** 
 For this example I am using this TechZone instance. Note that the watsonx. data intelligence instance only allows three sources to be scanned for lineage, so you'll probably want to use a new instance of this environment for this demo.
 
-**A PostgreSQL database.**
+** 3. A PostgreSQL database.**
 If a SaaS version of watsonx.data intelligence is used, as in this example, the PostgreSQL database must be accessible using a public IP or hostname in order to be reachable by the metadata import process. If a software version of watsonx.data intelligence is used, a public IP may not be necessary.
 
 This project uses an instance of Postgres hosted by aiven, using their free plan. Other providers of online free PostgreSQL are Neon and Supabase.
 
 Here is a screenshot of my aiven-based PostgreSQL connection properties:
+<img width="1504" height="785" alt="Screenshot 2026-10-08 at 4 57 14 PM" src="https://github.com/user-attachments/assets/f8ae59fe-3952-498e-8fe7-da51db61607f" />
 
