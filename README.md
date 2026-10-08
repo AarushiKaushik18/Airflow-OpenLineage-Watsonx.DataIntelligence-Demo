@@ -33,10 +33,12 @@ Run these commands in a terminal session to create a home directory for astro an
 mkdir ~/airflow
 cd ~/airflow
 astro dev init
+
 **Step 5 — Create requirements.txt**
 In a text editor, create the file ~/airflow/requirements.txt with this content:
 
 apache-airflow-providers-postgres[openlineage]
+
 **Step 6 - Create .env**
 Create the file ~/airflow/.env with the following text, including your own IBM_API_KEY on line 2. Edit the value on line 4 if you are running watsonx.data inteligence in a region other than ca-tor.
 
@@ -50,3 +52,18 @@ OPENLINEAGE__TRANSPORT__AUTH__TOKEN_ENDPOINT=https://iam.cloud.ibm.com/identity/
 OPENLINEAGE__TRANSPORT__AUTH__GRANT_TYPE=urn:ibm:params:oauth:grant-type:apikey
 OPENLINEAGE__TRANSPORT__AUTH__RESPONSE_TYPE=cloud_iam
 
+**Step 7 - Import the example Dag**
+Copy the file dags/airline_disruption_dag.py to the ~/airflow/dags directory.
+
+**Step 8 - Start Airflow**
+
+astro dev start
+
+You should see output like this:
+
+$ astro dev start
+✔ Project image has been updated
+✔ Project started
+➤ Airflow UI: http://airflow.localhost:6563
+➤ Postgres Database: postgresql://localhost:5432/postgres
+➤ The default Postgres DB credentials are: postgres:postgres
