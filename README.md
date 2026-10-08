@@ -98,13 +98,18 @@ Execute the sql/airline_disruption_setup.sql script in the PostgreSQL database's
 The following resources will be created:
 
 Tables
+
 crew_members
 disruption_events
 disruption_summary
 flights
 
 Views
+
 vw_crew_disruption_detail
 vw_flight_disruptions
+
+
+
 
 
