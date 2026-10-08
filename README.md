@@ -95,6 +95,12 @@ Here is a screenshot of my aiven-based PostgreSQL connection properties:
 **Create the PostgreSQL database resources**
 Execute the sql/airline_disruption_setup.sql script in the PostgreSQL database's public schema using your database tool of choice (I used DBeaver: https://dbeaver.io/)
 
+**Connect to Dbeaver:**
+<img width="1469" height="866" alt="Screenshot 2026-10-08 at 5 21 40 PM" src="https://github.com/user-attachments/assets/a43d5777-3a50-4eb1-90e0-8583bcbe429b" />
+
+When the connection will be successful, it will look like this:
+<img width="1469" height="866" alt="Screenshot 2026-10-08 at 5 21 40 PM" src="https://github.com/user-attachments/assets/c2c2e4a5-5d5c-413d-a7b1-a6bc2fad4c00" />
+
 The following resources will be created:
 
 Tables
