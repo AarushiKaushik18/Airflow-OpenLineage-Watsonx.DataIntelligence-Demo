@@ -63,10 +63,15 @@ astro dev start
 You should see output like this:
 
 $ astro dev start
+
 ✔ Project image has been updated
+
 ✔ Project started
+
 ➤ Airflow UI: http://airflow.localhost:6563
+
 ➤ Postgres Database: postgresql://localhost:5432/postgres
+
 ➤ The default Postgres DB credentials are: postgres:postgres
 
 **#Connect to the Airflow UI with your browser**
