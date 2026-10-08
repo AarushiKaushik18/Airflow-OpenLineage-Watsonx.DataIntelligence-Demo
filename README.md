@@ -34,7 +34,8 @@ mkdir ~/airflow
 cd ~/airflow
 astro dev init
 
-**Step 5 — Create requirements.txt**
+**Step 5 — Create requirements.txt** (• Mac: Press Command + Space, type TextEdit, and press Enter.
+)
 In a text editor, create the file ~/airflow/requirements.txt with this content:
 
 apache-airflow-providers-postgres[openlineage]
@@ -67,3 +68,9 @@ $ astro dev start
 ➤ Airflow UI: http://airflow.localhost:6563
 ➤ Postgres Database: postgresql://localhost:5432/postgres
 ➤ The default Postgres DB credentials are: postgres:postgres
+
+**#Connect to the Airflow UI with your browser**
+Point your browser to the Airflow UI URL printed in the previous step and you should see the UI:
+
+<img width="1508" height="933" alt="Screenshot 2026-10-08 at 4 46 43 PM" src="https://github.com/user-attachments/assets/f4784ecf-bd7b-4965-9095-5ee3064aec4b" />
+
