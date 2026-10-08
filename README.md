@@ -81,14 +81,30 @@ Point your browser to the Airflow UI URL printed in the previous step and you sh
 
 <img width="1508" height="933" alt="Screenshot 2026-10-08 at 4 46 43 PM" src="https://github.com/user-attachments/assets/f4784ecf-bd7b-4965-9095-5ee3064aec4b" />
 
-** 2. A watsonx.data intelligence environment.** 
+**2. A watsonx.data intelligence environment.**
 For this example I am using this TechZone instance. Note that the watsonx. data intelligence instance only allows three sources to be scanned for lineage, so you'll probably want to use a new instance of this environment for this demo.
 
-** 3. A PostgreSQL database.**
+**3. A PostgreSQL database.**
 If a SaaS version of watsonx.data intelligence is used, as in this example, the PostgreSQL database must be accessible using a public IP or hostname in order to be reachable by the metadata import process. If a software version of watsonx.data intelligence is used, a public IP may not be necessary.
 
 This project uses an instance of Postgres hosted by aiven, using their free plan. Other providers of online free PostgreSQL are Neon and Supabase.
 
 Here is a screenshot of my aiven-based PostgreSQL connection properties:
 <img width="1504" height="785" alt="Screenshot 2026-10-08 at 4 57 14 PM" src="https://github.com/user-attachments/assets/f8ae59fe-3952-498e-8fe7-da51db61607f" />
+
+**Create the PostgreSQL database resources**
+Execute the sql/airline_disruption_setup.sql script in the PostgreSQL database's public schema using your database tool of choice (I used DBeaver: https://dbeaver.io/)
+
+The following resources will be created:
+
+Tables
+crew_members
+disruption_events
+disruption_summary
+flights
+
+Views
+vw_crew_disruption_detail
+vw_flight_disruptions
+
 
