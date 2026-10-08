@@ -22,3 +22,31 @@ See the docs here for instructions on installing Podman. If you are using Window
 Run this command in a terminal session to install the astro cli:
 
 brew install astro
+
+**#Step 3 — Configure astro to use podman**
+Run this command in a terminal session to configure astro to use podman:
+
+astro config set container.binary podman -g
+**Step 4 — Create and initialize the Airflow environment**
+Run these commands in a terminal session to create a home directory for astro and to init the astro environment:
+
+mkdir ~/airflow
+cd ~/airflow
+astro dev init
+**Step 5 — Create requirements.txt**
+In a text editor, create the file ~/airflow/requirements.txt with this content:
+
+apache-airflow-providers-postgres[openlineage]
+**Step 6 - Create .env**
+Create the file ~/airflow/.env with the following text, including your own IBM_API_KEY on line 2. Edit the value on line 4 if you are running watsonx.data inteligence in a region other than ca-tor.
+
+AIRFLOW__OPENLINEAGE__NAMESPACE=airflow
+OPENLINEAGE__TRANSPORT__AUTH__APIKEY=<YOUR IBM CLOUD API KEY>
+OPENLINEAGE__TRANSPORT__TYPE=http
+OPENLINEAGE__TRANSPORT__URL=https://api.ca-tor.dai.cloud.ibm.com
+OPENLINEAGE__TRANSPORT__ENDPOINT=gov_lineage/v2/lineage_events/openlineage
+OPENLINEAGE__TRANSPORT__AUTH__TYPE=jwt
+OPENLINEAGE__TRANSPORT__AUTH__TOKEN_ENDPOINT=https://iam.cloud.ibm.com/identity/token
+OPENLINEAGE__TRANSPORT__AUTH__GRANT_TYPE=urn:ibm:params:oauth:grant-type:apikey
+OPENLINEAGE__TRANSPORT__AUTH__RESPONSE_TYPE=cloud_iam
+
